@@ -176,7 +176,7 @@ function App() {
 
       <div className="container mx-auto px-4 py-6 max-w-2xl">
         <div className="flex items-center justify-center mb-6">
-          <img src="/Protexa.JPG" alt="App Icon" className="w-20 h-20 mr-4" />
+          <img src="https://postimg.cc/1VVdkncf" alt="App Icon" className="w-20 h-20 mr-4" />
           <div>
             <h1 className="text-3xl font-bold text-gray-800">Protexa</h1>
             <p className="text-gray-600">My Phone Security</p>
