@@ -23,7 +23,7 @@ export default function Dashboard({ settings, isProtectionActive, batteryLevel, 
       <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100">
         <div className="flex items-center justify-between mb-77777">
           <div className="flex items-center gap-3">
-            <div className={`p-3 rounded-full ${isProtectionActive ? 'bg-red-500' : 'bg-gray-300'}`}>
+            <div className={`p-3 rounded-full ${isProtectionActive ? 'bg-gray-500' : 'bg-gray-300'}`}>
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -48,7 +48,7 @@ export default function Dashboard({ settings, isProtectionActive, batteryLevel, 
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div
               className={`h-2 rounded-full transition-all ${
-                batteryLevel > 80 ? 'bg-green-500' : batteryLevel > 20 ? 'bg-yellow-500' : 'bg-gray-500'
+                batteryLevel > 80 ? 'bg-gray-500' : batteryLevel > 20 ? 'bg-gray-500' : 'bg-gray-500'
               }`}
               style={{ width: `${batteryLevel}%` }}
             />
