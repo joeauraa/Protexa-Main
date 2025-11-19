@@ -20,7 +20,7 @@ export default function Dashboard({ settings, isProtectionActive, batteryLevel, 
 
   return (
     <div className="w-full max-w-md space-y-6">
-      <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-red-100">
+      <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100">
         <div className="flex items-center justify-between mb-77777">
           <div className="flex items-center gap-3">
             <div className={`p-3 rounded-full ${isProtectionActive ? 'bg-red-500' : 'bg-gray-300'}`}>
@@ -48,7 +48,7 @@ export default function Dashboard({ settings, isProtectionActive, batteryLevel, 
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div
               className={`h-2 rounded-full transition-all ${
-                batteryLevel > 80 ? 'bg-green-500' : batteryLevel > 20 ? 'bg-yellow-500' : 'bg-red-500'
+                batteryLevel > 80 ? 'bg-green-500' : batteryLevel > 20 ? 'bg-yellow-500' : 'bg-gray-500'
               }`}
               style={{ width: `${batteryLevel}%` }}
             />
@@ -56,7 +56,7 @@ export default function Dashboard({ settings, isProtectionActive, batteryLevel, 
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-red-100">
+      <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100">
         <h3 className="text-lg font-bold text-gray-800 mb-4">Active Features</h3>
         <div className="grid grid-cols-2 gap-3">
           {activeFeatures.map((feature) => (
@@ -64,11 +64,11 @@ export default function Dashboard({ settings, isProtectionActive, batteryLevel, 
               key={feature.name}
               className={`p-4 rounded-xl border-2 transition-all ${
                 feature.active
-                  ? 'bg-red-50 border-red-200'
+                  ? 'bg-gray-50 border-gray-200'
                   : 'bg-gray-50 border-gray-200 opacity-50'
               }`}
             >
-              <feature.icon className={`w-6 h-6 mb-2 ${feature.active ? 'text-red-600' : 'text-gray-400'}`} />
+              <feature.icon className={`w-6 h-6 mb-2 ${feature.active ? 'text-gray-600' : 'text-gray-400'}`} />
               <p className="text-xs font-semibold text-gray-700">{feature.name}</p>
             </div>
           ))}
